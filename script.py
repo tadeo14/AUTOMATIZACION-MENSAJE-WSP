@@ -1,13 +1,20 @@
 import pywhatkit as kit
-from important import MobileN
+import time
 
-# Enviar un mensaje directo
-#kit.sendwhatmsg("+5493424392941", "Mensaje test", 10, 25)
+def enviar_mensaje(numero, imagen, caption, hora, minuto):
+    try:
+        kit.sendwhats_image(numero, imagen, caption, hora, minuto)
+        print(f"Mensaje enviado a {numero}")
+    except Exception as e:
+        print(f"Error al enviar mensaje a {numero}: {str(e)}")
 
-imagePath = "PROMO.jpg" 
+# Lista de números de teléfono
+MobileN = ["+5493424392941", "+5493426102045"]
+
+imagePath = "PROMO.jpg"
 Caption = "a tumble"
-
 
 # Iterar sobre la lista de números y enviar el mensaje
 for numero in MobileN:
-    kit.sendwhats_image(numero, imagePath, Caption, 20)
+    enviar_mensaje(numero, imagePath, Caption, 10, 25)  # Ajusta la hora y minutos según sea necesario
+    time.sleep(30)  # Pausa de 30 segundos entre cada envío
