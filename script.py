@@ -9,8 +9,7 @@ phone_number = ["+5493455081206","+5493426356915","+5493424798052","+54934251141
 message = "Hola, esto es otra prueba"
 
 #Archivo adjunto 
-hour=8,
-minute=52
+
 attachment = "PROMO.jpg"
 
 
